@@ -1,0 +1,6 @@
+1) hacer un objeto que sea de reponer ese stock, ejemplo si me quede sin remera ir a buscarlo en la lista del proveedor, recorrer esa lista hasta encontrar el elemeto y push para mandarlo al stock.
+
+2) crear las prendas de ropa con respectivos talles, tipo, precio etc.
+
+3) hacer una funcion que sea el pedido final del cliente.
+La funcion tendria un parametro que seria el monto final de la compra, un for que recorre todos los pedidos que hizo el cliente, y un condicional que diga si desea seguir con la compra
