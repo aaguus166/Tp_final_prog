@@ -1,4 +1,10 @@
 {
+  "name": "trabajo_final_programacion",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node menu.js"
+  },
   "dependencies": {
     "prompt-sync": "^4.2.0"
   }

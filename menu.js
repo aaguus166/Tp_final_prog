@@ -1,60 +1,31 @@
-const prompt = require('prompt-sync')();
+import promptSync from 'prompt-sync';
+const prompt = promptSync();
+
  
-const prenda1 = {
-    nombre: "buzo deportivo",
-    precio: 5000,
-    stock: 10,
-    color: "azul",
-    talle: "M",
-    categoria: "buzos"
-}
-
-const prenda2 = {
-    nombre: "remera casual",
-    precio: 2000,
-    stock: 20,
-    color: "blanco",
-    talle: "L",
-    categoria: "remeras"
-}
-
-const prenda3 = {
-    nombre: "pantalon jean",
-    precio: 7000,
-    stock: 15,
-    color: "negro",
-    talle: "S",
-    categoria: "pantalones"
-}
-
-
-const prendas = [prenda1, prenda2, prenda3];
-
-const a = "buzos";
-const b = "remeras";
-const c = "pantalones";
-
 
 export function menu() {
-    const eleccion = prompt("selecione el la operacion que desea realizar 1- listar prendas 2- XX 3- EEE ");
+    const eleccion = prompt("selecione el la operacion que desea realizar 1- listar todas las prendas 2- filtrar prendas por talles 3- ir a pagar");
 
 
     switch (eleccion) {
         case "1": listarPrendas(); break;
-        case "2": funcionB(); break;
+        case "2": listar_por_talles(); break;
     }
 
-    
-
-    
 }
 menu();
 
-function listarPrendas() {
-    console.log(`las prendas actuales son ${prendas}`);
+export function listarPrendas() {
+
+    console.log("las prendas actuales son: " + JSON.stringify(prendas, null, 2));
+
     console.table(prendas);
 }
 
-function funcionB() {
-    console.log(`estas en la seccion ${B}`);
+function listar_por_talles(){
+    const talle = prompt("ingrese el talle que desea filtrar S M L XL: ");
+    const prendas_filtradas = prendas.filter(prenda => prenda.talle === talle.toUpperCase());
+    console.table(prendas_filtradas);   
+
 }
+
