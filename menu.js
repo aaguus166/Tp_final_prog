@@ -10,6 +10,7 @@ export function menu() {
     switch (eleccion) {
         case "1": listarPrendas(); break;
         case "2": listar_por_talles(); break;
+        case "3": pagar(); break;
     }
 
 }
@@ -29,3 +30,7 @@ function listar_por_talles(){
 
 }
 
+function pagar() {
+    console.log("selecciono ir a pagar");
+    
+}
